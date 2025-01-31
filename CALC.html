@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ઝકાત, સદકાહ અને ફિતરા ગણતરી</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ઝકાત, સદકાહ અને ફિતરા ગણતરી</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-form">
+            <h2>ગણતરી કરવા માટે માહિતી દાખલ કરો</h2>
+            <form id="calculation-form">
+                <label for="total-wealth">કુલ સંપત્તિ (₹):</label>
+                <input type="number" id="total-wealth" required>
+
+                <label for="gold-value">સોના (ગોલ્ડ) ની કિંમત (₹):</label>
+                <input type="number" id="gold-value" required>
+
+                <label for="income">દૈનિક આવક (₹):</label>
+                <input type="number" id="income" required>
+
+                <label for="sadaqah">સદકાહ (₹):</label>
+                <input type="number" id="sadaqah" required>
+
+                <button type="submit" id="calculate-btn">ગણતરી કરો</button>
+            </form>
+        </section>
+
+        <section class="calculation-results">
+            <h2>ગણતરી પરિણામ:</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>કુલ સંપત્તિ</th>
+                        <th>સોના ની કિંમત</th>
+                        <th>દૈનિક આવક</th>
+                        <th>સદકાહ</th>
+                        <th>ઝકાત</th>
+                        <th>ફિતરા</th>
+                    </tr>
+                </thead>
+                <tbody id="previous-entries">
+                    <!-- Previous entries will be stored here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Sindhi Saad</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
