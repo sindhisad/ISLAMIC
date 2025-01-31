@@ -296,21 +296,23 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #f4f4f4;
     color: #333;
 }
 
 /* Header Styling */
 header {
-    background-color: #2d3e50;
+    background: linear-gradient(135deg, #2d3e50, #1a2a6c);
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 50px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 /* Navigation Bar */
@@ -318,56 +320,72 @@ nav {
     background-color: #1a2a6c;
     padding: 15px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 nav a:hover {
     color: #ff7f50;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
-/* Main Content */
+/* Main Content Section */
 main {
     padding: 40px 10%;
+    background-color: #fff;
 }
 
 /* Hadith Content Section */
 .hadith-content {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
 }
 
 .hadith-content h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
     text-align: center;
+    margin-bottom: 20px;
+    color: #2d3e50;
 }
 
 .hadith-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
+/* Hadith Card Styling */
 .hadith-card {
     background-color: #f8f8f8;
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hadith-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hadith-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #1a2a6c;
+    color: #2d3e50;
 }
 
 .hadith-card p {
@@ -375,15 +393,16 @@ main {
     color: #555;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background-color: #2d3e50;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
+
 
         
