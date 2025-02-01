@@ -124,14 +124,14 @@ body {
     margin: 0;
     padding: 0;
     background: #0e0e0e; /* Pure dark background */
-    color: #fff;
+    color: #fff; /* White text for better visibility */
     text-align: center;
 }
 
 /* Header */
 header {
     background: #222;
-    color: #ffd700; /* Gold text */
+    color: #fff; /* White text */
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
 }
@@ -157,10 +157,10 @@ h1 {
     margin: 15px 0 5px;
     font-weight: bold;
     font-size: 1.2rem;
-    color: #ffd700;
+    color: #fff; /* White text */
 }
 
-/* Updated Input Fields with Dark Gold Text */
+/* Updated Input Fields with White Text */
 .calculator-form input,
 .calculator-form select {
     width: 100%;
@@ -170,12 +170,12 @@ h1 {
     border: 2px solid #b8860b; /* Dark gold border */
     font-size: 1rem;
     background: #b8860b; /* Dark gold background */
-    color: #b8860b; /* Dark gold text */
+    color: white; /* White text */
     text-align: center;
 }
 
 .calculator-form input::placeholder {
-    color: #b8860b; /* Dark gold placeholder text */
+    color: white; /* White placeholder text */
 }
 
 /* Button */
@@ -210,7 +210,7 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    color: white;
+    color: white; /* White text in table */
 }
 
 th, td {
@@ -233,4 +233,6 @@ tbody tr:hover {
 footer {
     background: #222;
     padding: 15px;
+    color: white; /* White text in footer */
 }
+
