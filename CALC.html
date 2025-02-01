@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ઝકાત, સદકાહ અને ફિતરા ગણતરી</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="zakat-sadaqah-fitra.css">
 </head>
 <body>
     <header>
@@ -29,6 +29,9 @@
                 <label for="sadaqah">સદકાહ (₹):</label>
                 <input type="number" id="sadaqah" required>
 
+                <label for="family-members">તમારા પરિવારના સભ્યોની સંખ્યા:</label>
+                <input type="number" id="family-members" required>
+
                 <button type="submit" id="calculate-btn">ગણતરી કરો</button>
             </form>
         </section>
@@ -44,6 +47,7 @@
                         <th>સદકાહ</th>
                         <th>ઝકાત</th>
                         <th>ફિતરા</th>
+                        <th>કુલ ફિતરા (પરિવાર માટે)</th>
                     </tr>
                 </thead>
                 <tbody id="previous-entries">
@@ -57,6 +61,6 @@
         <p>Created by Sindhi Saad</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="zakat-sadaqah-fitra.js"></script>
 </body>
 </html>
