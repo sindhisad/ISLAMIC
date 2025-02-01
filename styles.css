@@ -118,3 +118,123 @@ footer {
     background: rgba(255, 215, 0, 0.2);
     padding: 15px;
 }
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a2a6c, #b38728); /* Deep Blue to Gold Gradient */
+    color: #fff;
+    text-align: center;
+}
+
+/* Dark overlay for better readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark transparent overlay */
+    z-index: -1;
+}
+
+/* Header Styling */
+header {
+    background: rgba(255, 215, 0, 0.2); /* Gold transparency */
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.8);
+}
+
+/* Form Section */
+.calculator-form {
+    background: rgba(0, 0, 0, 0.7); /* Dark background for better contrast */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    width: 50%;
+    margin: 40px auto;
+}
+
+.calculator-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.calculator-form input,
+.calculator-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9); /* Lighter background for readability */
+    color: black;
+    text-align: center;
+}
+
+.calculator-form button {
+    background: linear-gradient(135deg, #ffd700, #b8860b);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+.calculator-form button:hover {
+    background: linear-gradient(135deg, #b8860b, #ffd700);
+    transform: scale(1.05);
+}
+
+/* Table Section */
+.calculation-results {
+    background: rgba(0, 0, 0, 0.7); /* Dark background */
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+th {
+    background: linear-gradient(135deg, #ffd700, #b8860b);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+tbody tr:hover {
+    background: rgba(255, 215, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 15px;
+}
