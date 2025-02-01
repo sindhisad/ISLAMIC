@@ -29,8 +29,15 @@
                 <label for="sadaqah">સદકાહ (₹):</label>
                 <input type="number" id="sadaqah" required>
 
-                <label for="family-members">તમારા પરિવારના સભ્યોની સંખ્યા:</label>
+                <label for="family-members">તમારા પરિવારના સભ્યો:</label>
                 <input type="number" id="family-members" required>
+
+                <label for="fitra-item">તમે ફિતરા શું આપશો?</label>
+                <select id="fitra-item">
+                    <option value="wheat">ગહું (Wheat)</option>
+                    <option value="rice">ચોખા (Rice)</option>
+                    <option value="dates">ખજૂર (Dates)</option>
+                </select>
 
                 <button type="submit" id="calculate-btn">ગણતરી કરો</button>
             </form>
@@ -46,8 +53,8 @@
                         <th>દૈનિક આવક</th>
                         <th>સદકાહ</th>
                         <th>ઝકાત</th>
-                        <th>ફિતરા</th>
-                        <th>કુલ ફિતરા (પરિવાર માટે)</th>
+                        <th>ફિતરા (એક વ્યક્તિ માટે)</th>
+                        <th>કુલ ફિતરા</th>
                     </tr>
                 </thead>
                 <tbody id="previous-entries">
