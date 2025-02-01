@@ -6,22 +6,24 @@ document.getElementById("calculation-form").addEventListener("submit", function 
     const goldValue = parseFloat(document.getElementById("gold-value").value);
     const income = parseFloat(document.getElementById("income").value);
     const sadaqah = parseFloat(document.getElementById("sadaqah").value);
+    const familyMembers = parseInt(document.getElementById("family-members").value);
 
     // Zakat Calculation (2.5% of wealth)
     const zakat = (totalWealth * 0.025).toFixed(2);
 
-    // Fitra Calculation (based on gold value)
-    const fitra = (goldValue * 0.1).toFixed(2);
+    // Fitra Calculation (fixed amount per person, assuming ₹100 per person)
+    const fitraPerPerson = 100; // You can change this value as needed
+    const totalFitra = (familyMembers * fitraPerPerson).toFixed(2);
 
     // Add the result to the table
-    addToResults(totalWealth, goldValue, income, sadaqah, zakat, fitra);
+    addToResults(totalWealth, goldValue, income, sadaqah, zakat, fitraPerPerson, totalFitra);
 
     // Store in localStorage
-    storeInLocalStorage(totalWealth, goldValue, income, sadaqah, zakat, fitra);
+    storeInLocalStorage(totalWealth, goldValue, income, sadaqah, zakat, fitraPerPerson, totalFitra);
 });
 
 // Function to add results to the table
-function addToResults(totalWealth, goldValue, income, sadaqah, zakat, fitra) {
+function addToResults(totalWealth, goldValue, income, sadaqah, zakat, fitraPerPerson, totalFitra) {
     const row = document.createElement("tr");
 
     row.innerHTML = `
@@ -30,16 +32,17 @@ function addToResults(totalWealth, goldValue, income, sadaqah, zakat, fitra) {
         <td>${income}</td>
         <td>${sadaqah}</td>
         <td>${zakat}</td>
-        <td>${fitra}</td>
+        <td>${fitraPerPerson}</td>
+        <td>${totalFitra}</td>
     `;
 
     document.getElementById("previous-entries").appendChild(row);
 }
 
 // Function to store results in localStorage
-function storeInLocalStorage(totalWealth, goldValue, income, sadaqah, zakat, fitra) {
+function storeInLocalStorage(totalWealth, goldValue, income, sadaqah, zakat, fitraPerPerson, totalFitra) {
     let previousEntries = JSON.parse(localStorage.getItem("zakatEntries")) || [];
-    previousEntries.push({ totalWealth, goldValue, income, sadaqah, zakat, fitra });
+    previousEntries.push({ totalWealth, goldValue, income, sadaqah, zakat, fitraPerPerson, totalFitra });
     localStorage.setItem("zakatEntries", JSON.stringify(previousEntries));
 
     // Load previous entries after adding new one
@@ -51,10 +54,9 @@ function loadPreviousEntries() {
     let previousEntries = JSON.parse(localStorage.getItem("zakatEntries")) || [];
 
     previousEntries.forEach(entry => {
-        addToResults(entry.totalWealth, entry.goldValue, entry.income, entry.sadaqah, entry.zakat, entry.fitra);
+        addToResults(entry.totalWealth, entry.goldValue, entry.income, entry.sadaqah, entry.zakat, entry.fitraPerPerson, entry.totalFitra);
     });
 }
 
 // Load previous entries when the page loads
 loadPreviousEntries();
-
