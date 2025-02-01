@@ -1,3 +1,17 @@
+// Market Prices in India (₹ per kg)
+const marketPrices = {
+    wheat: 29.4,  // ₹ per kg
+    rice: 35.0,   // ₹ per kg
+    dates: 200.0  // ₹ per kg
+};
+
+// Fitra quantity per person (kg)
+const fitraQuantities = {
+    wheat: 1.75,  // kg per person
+    rice: 3.5,    // kg per person
+    dates: 3.5    // kg per person
+};
+
 // Function to calculate Zakat, Fitra, and Sadaqah
 document.getElementById("calculation-form").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -7,12 +21,13 @@ document.getElementById("calculation-form").addEventListener("submit", function 
     const income = parseFloat(document.getElementById("income").value);
     const sadaqah = parseFloat(document.getElementById("sadaqah").value);
     const familyMembers = parseInt(document.getElementById("family-members").value);
+    const fitraItem = document.getElementById("fitra-item").value;
 
     // Zakat Calculation (2.5% of wealth)
     const zakat = (totalWealth * 0.025).toFixed(2);
 
-    // Fitra Calculation (fixed amount per person, assuming ₹100 per person)
-    const fitraPerPerson = 100; // You can change this value as needed
+    // Fitra Calculation
+    const fitraPerPerson = (fitraQuantities[fitraItem] * marketPrices[fitraItem]).toFixed(2);
     const totalFitra = (familyMembers * fitraPerPerson).toFixed(2);
 
     // Add the result to the table
